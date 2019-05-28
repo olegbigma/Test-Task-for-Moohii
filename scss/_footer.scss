@@ -1,0 +1,108 @@
+footer{
+    background: #fff;
+    padding: 30px 0 20px;
+    position: relative;
+    .container{
+        padding: 0 42px;
+    }
+}
+.footer-logo{
+    margin: 20px 0;
+    img{
+        width: 170px;
+    }
+}
+.footer-menu,.footer-contacts{
+    width: 50%;
+}
+
+.footer-menu{
+    padding-right: 50px;
+    .footer-categorys{
+        font-family: "BebasNeueBook";
+        font-size: 1.12rem;
+        line-height: 1.4;
+        letter-spacing: 1.4px;
+    }
+    .burger-button{
+        font-family: "BebasNeueRegular";
+        font-size: 1.25rem;
+        padding: 33px 0;
+        border-bottom: 1px solid $textcolorlight;
+        display: none;
+        &:hover>.burger-button__arrow{
+            transform: rotate(315deg);
+        }
+        &__arrow{
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid $buttonbg;
+            border-bottom: 2px solid $buttonbg;
+            margin-left: 10px;
+            transform: rotate(227deg);
+        }
+    }
+    .checkbox2{
+        display: none;
+    }
+    .footer-nav{
+        font-size: .88rem;
+        line-height: 1.8;
+    }
+}
+.footer-contacts{
+    .work-time{
+        font-size: 12px;
+        margin: 19px 0 25px;
+    }
+    .footer-yourRegion{
+        font-family: "Verdana";
+        font-size: 0.81rem;
+        margin-bottom: 20px;
+        display: none;
+        span{
+            font-size: .94rem;
+            color: $buttonbg;
+            border-bottom: 1px dashed $buttonbg;
+        }
+    }
+    .footer-number{
+        font-size: 1.12rem;
+    }
+    .callback{
+        font-size: 0.88rem;
+        padding: 12px 23px;
+        height: 42px;
+        border: 1px solid $buttonbg;
+        display:block;
+        box-sizing: border-box;
+        &:hover{
+            background: $buttonbg;
+            color: #fff;
+            transition: all .3s;
+        }
+    }
+    .payment-method{
+        p{
+            font-family: "Roboto-Thin";
+            margin-bottom: 28px;
+            display: block;
+        }
+        img{
+            margin-right: 30px;
+        }
+    }
+}
+.arrow-up{
+    position: absolute;
+    top: 65px;
+    right: 100px;
+}
+.copyrights{
+   p{
+    font-size: .75rem;
+    a{
+        color: $buttonbg;
+    }
+   }
+}

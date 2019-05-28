@@ -1,0 +1,146 @@
+.most-popular__wrap{
+    @extend .slider-wrap;
+}
+
+.most-popular__title{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dcdedd;
+    .title{
+        @include section-title;
+    }   
+}
+.most-popular__item{
+    width: 270px;
+    margin-right: 20px;
+    .most-popular__img{
+        background-repeat: no-repeat;
+        background-size: auto auto;
+        background-position: center 20px;
+        border-bottom: 2px solid #dcdedd;
+        .category{
+            padding: 8px 14px;
+            display: inline-block;
+            color: #fff;
+            background: #000;
+            font-size: 0.8rem;
+        }
+        .product-name{
+            padding: 285px 0 20px;
+            display: block;
+            line-height: 1.4;
+            height: 44px;
+        }
+        .most-popular__info{
+            padding-bottom: 30px;
+            font-size: .81rem;
+            line-height: 1.6;
+            display: none;
+            .most-popular__category{
+                color: $textcolorlight;
+            }
+        }
+    }
+    .first-img{
+        background-image: url(../img/givenchy.png);
+    }
+    .second-img{
+        background-image: url(../img/mangooil.png);
+    }
+    .third-img{
+        background-image: url(../img/comex.png);
+    }
+    .fourth-img{
+        background-image: url(../img/nailgel.png);
+    }
+    .fifth-img{
+        background-image: url(../img/loreal.png);
+    }
+    .buy{
+        padding: 16px 0;
+        .amount{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            font-size: 0.88rem;
+            display: none;
+            .text{
+                display: flex;
+                align-items: center;
+                color: $textcolorlight;
+            }
+            .numb{
+                border: 1px solid $textcolorlight;
+                padding: 10px 0;
+
+                .one{
+                    border-left: 1px solid $textcolorlight;
+                    border-right: 1px solid $textcolorlight;
+                }
+            }
+            span{
+                display: inline-block;
+                padding: 5px 10px;
+                font-family: Verdana, sans-serif;
+            }
+        }
+        .price-cart{
+            display: flex;
+            justify-content: space-between;
+        }
+        .old-price{
+            display: block;
+            text-decoration:line-through;
+            font-size: 1.12rem;
+        }
+        .sale-price{
+            font-size: 1.25rem;
+            color: $salecolor;
+            font-weight: bold;
+        }
+        .normal-price{
+           font-size: 1.12rem;
+           display: block;
+           padding-top: 25px; 
+        }
+        .add-to-cart{
+            display: inline-block;
+            padding: 14px 16px;
+            background-color: $buttonbg;
+            font-size: 1.12rem;
+            color: #fff;
+            font-family: "BebasNeueBook";
+            img{
+                display: inline-block;
+                width: 17px;
+                height: 13px;
+                margin-right: 10px;
+                transition: all .1s;
+            }
+            &:hover{
+                background: darken($buttonbg , 10%);
+                transition: all .2s;
+            }
+        }
+    }
+}
+
+// customize slick-arrows
+.most-popular{
+    .slick-next{
+        right: -10px;
+        top: 35%;
+        &::before{
+            @include most-popular__slick_arrows;
+            transform: rotate(227deg);
+        }
+    }
+    .slick-prev{
+       left: -10px;
+       top: 35%;
+       z-index: 10;
+       &::before{
+           @include most-popular__slick_arrows;
+           transform: rotate(45deg);
+       }
+    }
+}

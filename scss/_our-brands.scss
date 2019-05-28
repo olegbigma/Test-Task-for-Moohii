@@ -1,0 +1,16 @@
+.our-brands{
+    border-bottom: 2px solid #dcdedd;
+}
+.our-brands__wrap{
+    @extend .slider-wrap;
+}
+.our-brands__title{
+    @extend .most-popular__title;
+    margin-bottom: 20px;
+    .title{
+        @include section-title;
+    }
+}
+.our-brands__items{
+    padding: 0 50px 30px;
+}

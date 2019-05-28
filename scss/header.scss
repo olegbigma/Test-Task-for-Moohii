@@ -1,0 +1,197 @@
+@import'fonts';
+@import'settings';
+@import'mainslider';
+@import'most-popular';
+@import'our-brands';
+@import'footer';
+// preheader
+.preheader{
+    background: #000;
+    padding: 10px 0;
+    font-size: .8rem;
+    font-family: "Verdana";
+    .container{
+        padding: 0 42px;
+    }
+    .yourRegion{
+        color: $textcolorlight;
+        span{
+            color: #fff;
+        }
+    }
+    &__contacts{
+        a{
+        color: $textcolorlight;
+        margin-left: 40px;
+            &:hover{
+                color: #fff;   
+            }
+        }
+    }
+}
+
+// header header-info
+header{
+    background: $mainbg;
+    padding-bottom: 30px;
+    .header-info{
+        padding: 12px 42px;
+        align-items: center;
+        .align{
+            width: 33.3%;
+        }
+        &__contacts{
+            .number-desktop{
+                font-size: 1.12rem;
+                display: flex;
+                align-items: center;
+            }
+            .number-tablet{
+                display: none;
+            }
+            .callback{
+                font-size: 0.88rem;
+                display: flex;
+                align-items: center;
+                padding: 0 5px;
+                transition: all .3s;
+                &:hover{
+                    color:lighten($textcolor1 , 80%);
+                    border-radius: 10px;
+                    background: $buttonbg;
+                    transition: all .2s;
+                }
+            }
+        }
+        &__icons{
+            .header-info__icon{
+              margin-left: 25px;
+              font-family: "Verdana";
+              font-size: .75rem;
+              color: $textcolorlight;
+              display: block;
+              &:hover{
+                  color: darken($textcolorlight , 30%);
+              }
+            } 
+            .search__icon{
+            @include header-info__item;
+            background: $mainbg;
+            background-image: url(../img/search.png);
+            background-repeat: no-repeat;
+            background-position: 30% center;
+            } 
+            .favorits__icon{
+             @include header-info__item;
+             background-image: url(../img/heart.png);
+            }
+            .scales__icon{
+            @include header-info__item;
+            background-image: url(../img/scales.png);   
+            }
+            .cart__icon{
+            @include header-info__item;
+            background-image: url(../img/cart.png);   
+            }
+            .favorits{
+                display: none;
+            }
+        }
+    }
+}
+.work-time{
+    font-family: "Verdana";
+    font-size: .68rem;
+    color: $textcolorlight;
+    line-height: 1.7;
+}
+// menu
+header{
+    .menu{
+        padding: 20px 0;
+        border-top: 1px solid $textcolor1;
+        border-bottom: 2px solid $textcolorlight;
+        position: relative;
+        &__items{
+            padding: 0 42px;
+        }
+        &__link{
+            text-transform: uppercase;
+            font-family: "BebasNeueBook";
+            font-size: 1.12rem;
+            color: $textcolor2;
+            letter-spacing: 1px;
+            display: block;
+            &:hover{
+                text-shadow: 3px 2px 5px rgb(31, 29, 29);
+            }
+        }
+    }
+    .hamburger{
+        position: absolute;
+        margin: 0 auto;
+        width: 25px;
+        height: 25px;
+        left: 46px;
+        top: -46px;
+        display: none;
+        .bar{
+            width: 27px;
+            height: 4px;
+            padding: 0;
+            background: #000;
+            transition: all 0.4s ease-in-out;
+            position: absolute;
+            display: block;
+        }
+    }
+    .bar1 {
+        top: 0;
+        right: 0;
+    }
+    .bar2,
+    .bar3 {
+        top: 11px;
+        right: 0;
+    }
+    .bar3 {
+        right: 0;
+    }
+    .bar4 {
+        bottom: 0;
+        right: 0;
+    }
+    .checkbox1:checked + label > .hamburger > .bar1{
+        transform: rotate(45deg);
+        transform-origin: 5%;
+        width: 33px
+    }
+    
+    .checkbox1:checked + label > .hamburger > .bar2 {
+        transform: translateX(-40px);
+        background-color: transparent;
+    }
+    
+    .checkbox1:checked + label > .hamburger > .bar3 {
+        transform: translateX(40px);
+        background-color: transparent;
+    }
+    
+    .checkbox1:checked + label > .hamburger > .bar4 {
+        transform-origin: 5%;
+        transform: rotate(-45deg);
+        width: 33px;
+    }
+}
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+// .nav-burger , .nav-burger-checkbox{
+//     display: none;
+// }
+
+@import'responsive';

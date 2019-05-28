@@ -1,0 +1,82 @@
+main{
+    @extend header;
+}
+
+.slider-wrap{
+    background: #fff;
+    padding: 30px 42px;
+    margin-bottom: 30px;
+    .single-item{
+        .slider-content{
+            background-image: url(../img/slider-banner.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left top;
+            padding: 0 40px;
+            height: 330px;
+            display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            &__title{
+                font-family: "BebasNeueRegular";
+                font-size: 3rem;
+                font-weight: 300;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }            
+    }
+}
+
+// customize slick-dots
+.slick-dotted.slick-slider{
+    margin: 0;
+}
+.slick-dots{
+    bottom: 0;
+    li{
+        width: 10px;
+        height: 10px;
+        margin: 15px 10px;
+        button{
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                content: '';
+                border: 1px solid #fff;
+                background: transparent;
+                border-radius: 50%;
+                opacity: 1;
+            }
+        }
+    }
+    li.slick-active{
+        button{
+            &:before{
+                background: $buttonbg;
+            }
+        }
+    }
+}
+
+ // customize slick-arrows
+
+ .slick-next{
+     right: 15px;
+     &::before{
+         @include slick_arrows;
+         transform: rotate(227deg);
+     }
+ }
+ .slick-prev{
+    left: 15px;
+    z-index: 10;
+    &::before{
+        @include slick_arrows;
+        transform: rotate(45deg);
+    }
+}
