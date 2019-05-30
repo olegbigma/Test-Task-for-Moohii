@@ -775,7 +775,7 @@ header .checkbox1:checked + label > .hamburger > .bar4, main .checkbox1:checked 
   }
   .footer-wrap .footer-menu {
     width: 100%;
-    padding-right: 100px;
+    padding-right: 0;
     margin-bottom: 50px;
   }
   .footer-wrap .footer-contacts {
